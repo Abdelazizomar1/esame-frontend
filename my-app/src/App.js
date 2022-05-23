@@ -59,17 +59,14 @@ const App = () => {
   return (
     <div className="btn-group">
       {err && <h2>{err}</h2>}
-
       <button id="users" onClick={handleClick}>
         USERS Fetch data{" "}
       </button>
-
       <button id="comesse" onClick={barClick}>
         COMESSE Fetch data{" "}
       </button>
-
+      <br /> <br /> <br /> <br />
       {isLoading && <h2>Loading...</h2>}
-
       {data.map((person) => {
         return (
           <div key={person.id}>
@@ -80,10 +77,9 @@ const App = () => {
           </div>
         );
       })}
-
       {data.map((comesse) => {
         return (
-          <div key={comesse.clientId}>
+          <div key={comesse.id}>
             <h2>{comesse.role}</h2>
             <h2>{comesse.displayName}</h2>
             <br />
